@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33BD29B2DD1D99AE67316517 /* Pods_QuizMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7422043B443D0DCC40EE9D /* Pods_QuizMe.framework */; };
 		B58CEF1A22181D190017BF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CEF1922181D190017BF56 /* AppDelegate.swift */; };
 		B58CEF1C22181D190017BF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CEF1B22181D190017BF56 /* ViewController.swift */; };
 		B58CEF1F22181D190017BF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58CEF1D22181D190017BF56 /* Main.storyboard */; };
@@ -14,9 +15,13 @@
 		B58CEF2422181D1C0017BF56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58CEF2222181D1C0017BF56 /* LaunchScreen.storyboard */; };
 		B58CEF3022189A5A0017BF56 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CEF2F22189A5A0017BF56 /* Question.swift */; };
 		B58CEF32221966FE0017BF56 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CEF31221966FE0017BF56 /* QuestionBank.swift */; };
+		B5C17B352219EC0E0003727D /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C17B342219EC0E0003727D /* ProgressHUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B7422043B443D0DCC40EE9D /* Pods_QuizMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		361247BEBF0773937F692F7C /* Pods-QuizMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizMe.debug.xcconfig"; path = "Target Support Files/Pods-QuizMe/Pods-QuizMe.debug.xcconfig"; sourceTree = "<group>"; };
+		641C3F957A40E0732127478E /* Pods-QuizMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizMe.release.xcconfig"; path = "Target Support Files/Pods-QuizMe/Pods-QuizMe.release.xcconfig"; sourceTree = "<group>"; };
 		B58CEF1622181D190017BF56 /* QuizMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58CEF1922181D190017BF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B58CEF1B22181D190017BF56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		B58CEF2522181D1C0017BF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B58CEF2F22189A5A0017BF56 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B58CEF31221966FE0017BF56 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		B5C17B342219EC0E0003727D /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C17B352219EC0E0003727D /* ProgressHUD.framework in Frameworks */,
+				33BD29B2DD1D99AE67316517 /* Pods_QuizMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3077BFCBB7916E2DBAD7D46B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				361247BEBF0773937F692F7C /* Pods-QuizMe.debug.xcconfig */,
+				641C3F957A40E0732127478E /* Pods-QuizMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E44964F7F7CE84C368F94AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5C17B342219EC0E0003727D /* ProgressHUD.framework */,
+				1B7422043B443D0DCC40EE9D /* Pods_QuizMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B58CEF0D22181D190017BF56 = {
 			isa = PBXGroup;
 			children = (
 				B58CEF1822181D190017BF56 /* QuizMe */,
 				B58CEF1722181D190017BF56 /* Products */,
+				3077BFCBB7916E2DBAD7D46B /* Pods */,
+				9E44964F7F7CE84C368F94AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B58CEF2822181D1C0017BF56 /* Build configuration list for PBXNativeTarget "QuizMe" */;
 			buildPhases = (
+				CF1F2BD17E7CB5F2CA14BD79 /* [CP] Check Pods Manifest.lock */,
 				B58CEF1222181D190017BF56 /* Sources */,
 				B58CEF1322181D190017BF56 /* Frameworks */,
 				B58CEF1422181D190017BF56 /* Resources */,
+				F92C10F1BB8229776292BDCE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +197,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF1F2BD17E7CB5F2CA14BD79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuizMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F92C10F1BB8229776292BDCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizMe/Pods-QuizMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizMe/Pods-QuizMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B58CEF1222181D190017BF56 /* Sources */ = {
@@ -320,6 +397,7 @@
 		};
 		B58CEF2922181D1C0017BF56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361247BEBF0773937F692F7C /* Pods-QuizMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -340,6 +418,7 @@
 		};
 		B58CEF2A22181D1C0017BF56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 641C3F957A40E0732127478E /* Pods-QuizMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
